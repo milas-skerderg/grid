@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    background:#ddd;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "main2 main2 main3 main3"
+        "main4 main4 main5 main5"
+        "main6 main6 main7 main7"
+        "footer footer footer footer ";
+}
+.grid-items{
+    background-color:darkgrey;
+    color: white;
+    padding: 15px;
+    font-size: 1em;
+
+}
+
+.one{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.two{
+    grid-area: main;
+}
+.three{
+    grid-area: main2;
+}
+.four{
+    grid-area: main3;
+}
+.five{
+    grid-area: main4;
+}
+.six{
+    grid-area: main5;
+}
+.seven{
+    grid-area: main6;
+}
+.eight{
+    grid-area: main7;
+}
+.nine{
+    grid-area: footer;
+    text-align: center;
+}
+.picture{
+    width: 100%;
+}
+.icon{
+    display: flex;
+}
+
+@media screen and (min-width:900px){
+
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "main2 main3 main4"
+        "main5 main6 main7"
+        "footer footer footer";
+    }
+}
+
+@media screen and (min-width:1100px){
+
+.grid-items{
+    font-size: 0.7em;
+}
+
+    .container{
+        grid-template-areas: 
+        "header header header"
+        ". . ."
+        "main main ."
+        "main main ."
+        "main main main2"
+        "main main main2"
+        ". . ."
+        "main3 main4 main4"
+        "main3 main4 main4"
+        ". main4 main4"
+        ". main4 main4"
+        ". . ."
+        "main5 main6 main7"
+        "main5 main6 main7"
+        ". . ."
+        "footer footer footer";
+    }
+}
